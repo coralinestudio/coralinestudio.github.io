@@ -1,6 +1,3 @@
 name: Portifólio de CoralineStudio
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
-
- gems: [jekyll-swfobject]
- # This will require each of these gems automatically.
