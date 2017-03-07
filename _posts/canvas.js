@@ -30,11 +30,3 @@ function showIntro () {
 // ...
 }
 }
-</script>
-<style type="text/css" media="screen">
-html { height: 100%; overflow: hidden }
-body {
-margin: 0px;
-padding: 0px;
-height: 100%;
-}
