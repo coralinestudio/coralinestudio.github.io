@@ -1,16 +1,40 @@
 window.onload = function () {
-var canvas = document.getElementById('game');
-
-// Force canvas to dynamically change its size to
-
+var canvas = document.getElementById('myCanvas');
 var c = canvas.getContext('2d');
-
-c.fillStyle = '#000000';
-c.fillRect (0, 0, 20, 20);
-
-var phrase = "Click or tap the screen to start the game";
-c.font = 'bold 16px Arial, sans-serif';
-c.fillStyle = '#FFFFFF';
-c.fillText (phrase, 10, 30);
-
+var State = {
+_current: 0,
+INTRO: 0,
+LOADING: 1,
+LOADED: 2
+}
+window.addEventListener('click', handleClick, false);
+window.addEventListener('resize', doResize, false);
+doResize();
+function handleClick() {
+State._current = State.LOADING;
+fadeToWhite();
+  }
+function doResize() {
+canvas.width = document.body.clientWidth;
+canvas.height = document.body.clientHeight;
+switch (State._current) {
+case State.INTRO:
+showIntro ();
+break;
+}
+}
+function fadeToWhite(alphaVal) {
+// ...
+}
+function showIntro () {
+// ...
+}
+}
+</script>
+<style type="text/css" media="screen">
+html { height: 100%; overflow: hidden }
+body {
+margin: 0px;
+padding: 0px;
+height: 100%;
 }
